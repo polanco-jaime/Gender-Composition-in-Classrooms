@@ -1,0 +1,127 @@
+
+
+This study delves into the influence exerted by the gender composition within secondary schools on students' decisions regarding their choice of university majors. To achieve this, we undertake an examination of participation rates across ten distinct fields of study , each representing potential post-secondary career paths. Our investigation employs two distinct methodologies to ensure comprehensive analysis, while also exploring the underlying mechanisms driving these relationships.
+
+
+\subsection{Mechanism}
+The accumulation of human capital and post-secondary school decisions, particularly in the selection of a major university, is discussed in studies such as \citet{Hanushek1979} and \citet{Petra2003}. In these studies, the decision results from a multifaceted interaction between expected future income, budget constraints when the student makes the decision, family attributes, student attributes, school attributes, and social influences to which students are exposed. Among these factors, student attributes play a critical role, encompassing intelligence, motivation, study habits, competitiveness, and other influential characteristics \footnote{Studies by \citet{LONNQVIST2015254} and \citet{Thomas2014} demonstrate the impact of risk attitudes and self-confidence on students' academic choices.}.
+
+\citet{NBERw22010} explicates the life cycle of households in three distinct stages: education, early work, and late work. This progression is supported by theoretical models of human capital accumulation (refer, for instance, to \citet{BenPorath}). Theoretical models of human capital accumulation predominantly hinge on the time available for students to dedicate to their studies. Having more time to study directly correlates with spending less time on early work. However, this also implies a budgetary constraint when deciding whether to pursue further studies and which field to study.  
+
+Environmental factors, including social support and media, significantly influence students' interest in STEM careers, as revealed by \citet{Wang2023Gender}. The study highlights that male students generally exhibit higher interest in STEM careers compared to female students. The influence mechanisms differ, with social support being more impactful for males and media playing a greater role for females. 
+ 
+Another perspective on gender roles is provided by \citet{Alesina2013}, who explore the historical origins of cross-cultural differences in beliefs and values regarding the appropriate role of women in society. The study focuses on the influence of traditional agricultural practices, particularly plough agriculture, on the evolution of gender norms. The findings suggest that societies with a heritage of traditional plough use exhibit less equal gender norms in contemporary beliefs and practices, even among the descendants living in diverse environments. This underlines the lasting impact of historical practices on contemporary societal values and gender roles.
+
+According to the OECD (\citet{pisa_mechanism}), motivated students achieve better performance in mathematics, and in this sense mathematics performance in school is a predictor of choosing a STEM major at university (\citet{Kohen2022}).
+ 
+
+The investigation conducted by \citet{Sutter2010gender} revealed a notable gender-based divergence in competitiveness, wherein males exhibited a heightened level by 15 to 20 percentage points compared to the average competitiveness observed in females. This discernible gap in competitiveness is particularly intriguing as it manifests as early as 4 to 5 years of age, underscoring the early emergence of gender disparities in this trait. Additionally, \citet{Gindi2019} extended these findings by highlighting that boys tend to manifest greater competitiveness in motor and spatial domains, while girls demonstrate heightened competitiveness in verbal areas.
+
+Furthermore, empirical support for the association between the desire for competitiveness and career choices is provided by \citet{Thomas2014}. This experimental study establishes a robust connection between individuals' inclination toward competitiveness and their career preferences. Notably, the findings of this study suggest that men tend to display a greater proclivity for competitiveness compared to women. Moreover, it underscores a direct correlation between the level of competitiveness and the chosen academic major at the university level. Intriguingly, highly competitive individuals predominantly opt for disciplines within the Science, Technology, Engineering, and Mathematics (STEM) domain.
+
+
+
+\begin{center}
+    \begin{tabular}{lllll}
+        \begin{tabular}[c]{@{}l@{}}Proportion of male \\ students in a classroom\end{tabular} & $\Rightarrow$ & \begin{tabular}[c]{@{}l@{}}Female\\ competitiveness\end{tabular} & $\Rightarrow$ & \begin{tabular}[c]{@{}l@{}}University \\ major choice\end{tabular}
+    \end{tabular}
+\end{center}
+
+Therefore, it is anticipated that the gender composition within a classroom significantly influences female competitiveness. A higher proportion of male students may suggest a narrowing gender gap in career selection, primarily attributed to the impact of competitiveness emanating from male peers. This influence could exhibit variations across academic domains, with fields associated with humanities, social sciences, economics, and languages—traditionally dominated by female students—experiencing a decline in female participation relative to male involvement when influenced by their male counterparts.
+
+In contrast, within STEM-related disciplines, it is expected that female students will demonstrate a reduction in the gender gap, driven by the substantial influence exerted by male peers in the classroom. Essentially, the presence of male students alters the behavioral dynamics of female students, leading to a diminished participation gap between men and women.
+
+ 
+
+An additional interpretation regarding marginal effects and the significance of these coefficients could enhance the understanding of how the likelihood of choosing a specific major changes with varying gender compositions in secondary schools. For example, a positive \(\beta_1\) might suggest a certain increase in the probability of a female student choosing the specified major compared to male students, specifically considering a change in the gender composition of their class.
+%%%%%%%%%%%%%%%%%%%%%%%
+
+Moreover, the incorporation of school-fixed effects enables the consideration of inherent and stable characteristics unique to different educational institutions.
+School-fixed effects allow us to account for the intrinsic and stable characteristics of different schools. For instance, some schools may emphasize technology, business, or industry-related subjects. The geographical features and physical attributes of a school may remain consistent and unique across different generations. It includes the socio-demographic and economic conditions of the students in a school that remain constant.
+
+Furthermore, time-fixed effects help to capture systematic variations that occur over time. Changes in societal norms, economic conditions, and government policies, as well as other temporal trends, can influence educational choices over different periods. These time-specific effects are crucial for a more comprehensive understanding of the changing landscape of educational decisions made by individuals, particularly women entering university programs.
+
+
+\subsection{Methodology 1: Event-Study Regressions}
+
+To address potential biases intrinsic to fixed effect estimation, we employ a distinct approach by leveraging the transition from single-sex schools to co-educational settings. This unanticipated shift serves as an intervention influencing student behavior, enabling a more robust examination of its effects.
+
+Our study encompasses all public schools in Colombia that have undergone this transition, allowing us to track student enrollments across diverse academic fields at the university level. Employing a Staggered Difference-in-Differences design (S-DiD), we compare schools that have undergone the transition with those that, as of 2020, had not yet experienced the shift (treated schools versus no treated yet schools). This methodological strategy helps reveal the causal impact of the transition on student choice at university, offering insight into the implications arising from the change in school structure on students' university enrollment patterns.
+
+\begin{equation} 
+\hat{\tau} = \bar{Participation^P_{ \text{after transition}} } - \bar{Participation^P_{ \text{before transition}} }
+\end{equation}
+
+Where \( \hat{\tau} \) represents the change in the average participation of students in the academic major \( P \) before and after the transition from single-sex to co-educational schooling.
+
+Given your focus on the participation of students in major \( P \) before and after a transition, the adapted formula might look something like this (based on \citet{SUN2021175} ):
+
+\begin{equation} 
+\text{Participation}_{c,t,j}^P = \beta_0 + \sum_{\varphi = -S}^{-2} \mu_{\varphi} \cdot D_{c,\varphi} + \sum_{\varphi = 0}^{M} \mu_{\varphi} \cdot D_{c,\varphi} + \sigma_t + \gamma_c + \varepsilon_{c,t}
+\end{equation}
+
+Here:
+- \( \text{Participation}_{c,t,j}^P \) represents the level of participation of students in major \( P \) at a particular school \( c \) and time \( t \).
+- \( \beta_0 \) is the intercept or baseline level of participation in major \( P \).
+- \( \mu_{\varphi} \) are the parameters associated with the different time periods or treatment phases \( \varphi \).
+- \( D_{c,\varphi} \) are dummy variables denoting the treatment status (e.g., before and after the transition) for school \( c \) at time \( \varphi \).
+- \( \sigma_t \) captures time-specific effects.
+- \( \gamma_c \) captures school-specific effects.
+- \( \varepsilon_{c,t} \) is the error term.
+
+By including both time-specific and school-specific effects in the estimation, the analysis can better account for and control various unobserved factors that might influence students' choices of university majors. This helps provide a more accurate understanding of the specific influence of transitioning from single-sex to co-educational schooling on the participation of students in the specified academic major, resulting in more robust and reliable estimations.
+
+The time-specific fixed effect is crucial as it captures broader trends or fluctuations that might affect student participation in academic majors, regardless of the transition being studied. Societal changes, economic shifts, or educational reforms occurring independently of the transition could impact students' major choices. By including these effects, the model more effectively isolates the transition's specific impact on student decisions.
+
+Conversely, the school-specific fixed effect addresses persistent differences between schools, unrelated to the transition itself. Each school possesses unique attributes, teaching methods, or cultural distinctions that could influence students' major choices. Incorporating these school-specific effects helps the model accommodate these differences, effectively separating the transition's impact from inherent school-specific variations.
+
+To address potential biases intrinsic to fixed effect estimation, our approach hinges on leveraging the transition from single-sex schools to coeducational settings as a natural intervention influencing student behavior. This unanticipated shift provides a unique opportunity for a robust examination of its effects.
+
+\vspace{5mm}
+\textit{Identification Strategy}
+\vspace{3mm}
+
+Our study aims to ascertain the causal effect of Colombian schools transitioning from single-sex to coeducational settings on students' choice of university majors post-graduation. This is accomplished through the utilization of a staggered difference-in-differences (S-DiD) design, which involves a comparison between schools that have already undergone the transition and those that have not yet done so as of 2020.
+
+The effectiveness of the S-DiD design relies on several critical assumptions. Firstly, we assume parallel trends in the absence of the transition, implying that the trends in students' choice of major P would have evolved similarly between schools that transitioned and those that have not yet transitioned, under the influence of common unobserved factors affecting major choice across schools.
+
+Additionally, we assume the absence of concurrent shocks differentially affecting treated and untreated schools over the study period, apart from the transition itself. The inclusion of time fixed effects helps in adjusting for broader secular trends. Furthermore, we assume no anticipation of the transition's impact on student behavior until its actual occurrence, and test for any anticipatory effects by examining leads of the treatment indicator.
+
+Moreover, the irreversibility assumption posits that once a school transitions, it remains coeducational throughout the study period, with no schools reverting to single-sex education within the sample. We also rely on the presence of overlapping cohorts within each school at any given time, enabling the observation of treated and untreated cohorts concurrently to identify the effect.
+
+Finally, we assume the stability of student and school compositions over time. School fixed effects are incorporated to adjust for time-invariant compositional differences across schools.
+
+The staggered timing of schools' transitions provides variation in treatment status over time. By comparing outcomes between treated and untreated schools before and after the transitions, and conditioning on school and time fixed effects, we can effectively isolate the causal effect of the transition, contingent upon the validity of the aforementioned assumptions.
+
+\subsection{Methodology 2: Probability Estimation based on Gender Composition}
+
+In this secondary analysis, we compute the probability that a secondary school student, denoted as $i$, selects a particular university major $c$ based on the gender composition within their classroom. For instance, a gender composition of 0.2 signifies that a secondary female student, denoted as $i$, studied in a classroom where 20\% of the students were male, while the remaining 80\% were female.
+
+To gauge the likelihood of a secondary school student opting for a specific university major contingent upon the classroom gender composition, we segment the groups based on specific proportions of male students within each classroom.
+
+Moreover, as an integral part of our analytical framework, we have adapted the methodology proposed by \citet{IMBENS2012}. This methodology, focusing on minimizing the mean squared error to identify similar groups based on their outcome variable, has been tailored to segment a range of fractions of male students in a classroom who make similar study decisions. This adaptation is founded on the Binary Cross Entropy loss function (\citet{Mao2023}), with a detailed explanation provided in Appendix \ref{bce}.
+
+This estimate pertains to each student represented as $i$. Therefore, the relationship is expressed as follows:
+
+\begin{equation}
+     \log\left(\frac{P(Y_{i,s,t}^c  = 1)}{1 - P(Y_{i,s,t}^c  = 1)}\right) =  
+       \beta_1 \times Gender_{i,s,t} +
+       \beta_2 \times X_{i,s,t}^c  + \gamma_{t} + \gamma_{s} + 
+       \varepsilon_{i,s,t}
+\end{equation}
+
+Where $Y_{i,s,t}^c$ is the binary response variable for students $i$ who have completed secondary school in the school $s$. It takes the value of 1 when a student $i$ chooses a university major $c$ and 0 otherwise. $Gender_{i,s,t}$ takes the value of 1 for female students of a secondary school. $X_i$ is a vector of student $i$ characteristics in each secondary school. The model includes school fixed effects ($\gamma_{t} $), year fixed effects ($\gamma_{t}$), and the usual error term $\varepsilon_{i,s,t}$.
+
+$\beta_1$ is the coefficient of interest that specifically represents the relationship between being a female student (denoted as \( Gender = Female \)) and the log-odds of a female student choosing a particular university major $c$, while holding other variables constant in the model. A positive value for $\beta_1$ suggests a positive correlation between being a female student and the likelihood of choosing the academic major 'c' compared to male students. This means that, all else being equal, being a female student is associated with a higher probability of choosing the specified academic major 'c' as compared to being a male student.
+
+The table  \ref{tab:summary_bce} provides a comprehensive summary of key statistics derived from BCE bootstraping estimation, facilitating inference on the optimal distance concerning the selection of university majors based on gender composition within secondary schools. Each row of the table corresponds to a distinct outcome or university major, while the columns offer insights into the mean Binary Cross Entropy (BCE) score, standard deviation, and optimal distance. This optimal distance serves as a critical parameter in the estimation process across various subsets of gender composition settings.
+
+\input{Tables/optimal_bce}
+
+
+The mean BCE score represents the average predictive accuracy of the model in estimating the probability of students choosing a specific major, with lower values indicating better predictive performance. The standard deviation reflects the variability in BCE scores across observations for each major, providing insights into the consistency of model predictions.
+
+Additionally, the optimal distance represents the threshold of gender composition within classrooms that minimizes entropy in schooling decisions for each major. This distance signifies the proportion of male students within a classroom that exerts the most significant influence on students' choices of university majors. For instance, a higher optimal distance suggests that gender composition plays a more substantial role in determining students' decisions regarding that major.
+
+These statistics serve as valuable indicators of the relationship between gender composition and university major selection, shedding light on the nuanced dynamics influencing students' educational trajectories. They provide essential context for understanding the impact of classroom demographics on academic choices and inform policymakers and educators seeking to promote gender diversity and equity within educational settings.
+

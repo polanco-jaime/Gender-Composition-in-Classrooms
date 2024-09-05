@@ -1,0 +1,35 @@
+\begin{table}[H]
+\centering
+\caption{Summary of Bootstrapped BCE Estimation}
+\label{tab:summary_bce}
+\begin{tabular}{lccc}
+\toprule
+Outcome                              & Mean BCE & Standard Deviation & Optimal Distance \\ \hline
+& \multicolumn{3}{c}{\textbf{BCE Estimation Results}} \\
+
+\midrule
+Law & 0.1189 & 0.0117 & 0.0998 \\
+Medicine & 0.1000 & 0.0108 & 0.1109 \\
+No Studies & 0.7555 & 0.0062 & 0.0832 \\
+Health Sciences & 0.1585 & 0.0309 & 0.1109 \\
+Education Sciences & 0.1313 & 0.0184 & 0.1109 \\
+Agronomy, Veterinary \& Related & 0.1202 & 0.0117 & 0.1109 \\
+Social Sciences \& Humanities & 0.2107 & 0.0262 & 0.1109 \\
+Mathematics \& Natural Sciences & 0.0988 & 0.0036 & 0.1109 \\
+Fine Arts & 0.1041 & 0.0107 & 0.1109 \\
+Engineering, Architecture \& Related & 0.4616 & 0.0884 & 0.1109 \\
+Economics \& Business Related & 0.3890 & 0.0538 & 0.0832 \\
+\hline
+\hline
+Fixed Effects & \multicolumn{3}{c}{Not Applicable} \\  
+S.E. Clustered by: & \multicolumn{3}{c}{Not Applicable} \\
+\bottomrule
+\end{tabular}
+\begin{threeparttable}
+\begin{tablenotes}
+\small
+\item \textbf{Note:} This table presents the results of bootstrapped BCE estimation for different university major categories. The Mean BCE represents the average predictive accuracy of the model, with lower values indicating better performance. The Standard Deviation reflects the variability in BCE scores. The Optimal Distance represents the threshold of gender composition (proportion of male students) in classrooms that minimizes entropy in schooling decisions for each major category.
+\item Significance codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

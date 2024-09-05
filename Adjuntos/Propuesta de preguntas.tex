@@ -1,0 +1,222 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Librerias
+\documentclass[9pt]{beamer} 
+\usefonttheme{serif}
+\usepackage[utf8]{inputenc}
+\usepackage{colortbl}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{empheq} 
+\usepackage{hyperref}
+\usepackage{outlines}
+\usepackage[english,spanish]{babel}
+\selectlanguage{spanish}
+% https://es.overleaf.com/learn/latex/Beamer
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% General settings
+%\logo{}{\includegraphics[scale=0.2]{Formato de presentaciones/logo.jpg}}
+\titlegraphic{\includegraphics[scale=0.2]{Formato de presentaciones/logo.jpg}{}}
+%\logo{\includegraphics[scale=0.2]{Formato de presentaciones/logo.jpg}{}}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{quest}[thm]{Question}
+\newtheorem{prob}[thm]{Problem}
+%\useoutertheme{Formato de presentaciones/Formato_2.sty}
+\usetheme{CambridgeUS}
+% albatross wolverine
+\usecolortheme{wolverine}
+\title[PROPUESTA]{Preguntas de investigación\\ Seminario de Investigación}
+\author[Jaime Polanco] { Jaime Polanco\inst{1}}
+\institute[PUJ] % (optional)
+{
+  \inst{1}%
+  Facultad de Ciencias Económicas y Administrativas\\
+  Pontificia Universidad Javeriana
+
+}
+\date{Agosto, 2021}
+
+
+\begin{document}
+%--------------------New Frame---------------------------
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%--------------------New Frame---------------------------
+
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Layout}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+%-------------------- Agenda ---------------------------
+\begin{frame}{Agenda}
+Las preguntas a resolver, se relacionan con:
+\begin{itemize}
+\item Cambio climatico
+\item Etnias, politica  
+\item Salud
+\item Cobertura electrica
+\item Infraestructura
+\item Desarrollo
+
+\end{itemize}
+\end{frame}
+
+\section{Direction Fields}
+ 
+ 
+%--------------------New Frame---------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{frame}{Propuesta 1}
+¿La cercanía de campos o refinerías petroleras a los centros poblados incide en problema de salud pública para menores?\\~\\
+\\~\\
+\\*
+\\*
+\begin{itemize}
+\item [] Datos a usar:
+\begin{itemize}
+\item Sistema de Vigilancia en Salud Pública -SIVIGILA, datos desde 2007 - la fecha
+    \begin{itemize}
+    \item CANCER INFANTIL, CANCER EN MENORES DE 18, LEUCEMIA LINFOIDE Y MILOIDE ETC. POR AÑO, POR MUNICIPIO.
+\end{itemize}
+\item Mapa de tierras (Campos, bloques petroleros), SGC
+\item Contratos E\&P, Niveles de producción de petróleo por municipio, por año. ANH
+
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+%--------------------New Frame---------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{frame}{Propuesta 2}
+\begin{itemize}
+\item[] ¿El cambio climático tiene efectos adversos sobre la salud pública de Colombia y la calidad en la educación?
+\item[] ¿Existe un efecto del clima sobre la salud pública de Colombia y la calidad en la educación?\\~\\
+
+\\~\\
+\\*
+\\*
+\begin{itemize}
+\item []
+
+ Datos a usar:
+\begin{itemize}
+\item Precipitaciones, datos desde 1970 - la fecha
+\item Volumen de agua en subsuelo, datos desde 1970 - la fecha
+\item Radiación solar neta en superficie, datos desde 1970 - la fecha
+\item traspiración vegetal, datos desde 1970 - la fecha
+\item Índice de área foliar alto y bajo, datos desde 1970 - la fecha
+ 
+\item Sistema de Vigilancia en Salud Pública -SIVIGILA, datos desde 2007 - la fecha
+\item Pruebas saber 11
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\end{frame}
+%--------------------New Frame---------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{frame}{Propuesta 3}
+\begin{itemize}
+\item[] ¿Se puede crear un índice de desarrollo municipal a partir de análisis espaciales?
+
+\\~\\
+\\*
+\\*
+\end{itemize}
+\begin{itemize}
+\item [] Datos a usar:
+\begin{itemize}
+\item Productividad de la tierra
+     \begin{itemize}
+        \item Volumen de agua en subsuelo, datos desde 1970 - la fecha
+        \item Radiación solar neta en superficie, datos desde 1970 - la fecha
+        \item traspiración vegetal, datos desde 1970 - la fecha
+        \item Índice de área foliar alto y bajo, datos desde 1970 - la fecha
+        \item Índice de área foliar alto y bajo, datos desde 1970 - la fecha
+        \item Bandas hiperespectrales, datos desde 1970 - la fecha
+    \end{itemize}
+\item Luminiscencia nocturnas
+\item Red Vial
+\item Pruebas Saber 11
+\item grupo información criminalidad,  estadística delictiva policía nacional
+\item SIVIGILA - Enfermedades transmisibles
+\item Registros Individuales de Prestación de Servicios de Salud – RIPS
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+%--------------------New Frame---------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{frame}{Propuesta 4}
+¿Existe una relacion etnica con los indices de desarrollo local (factores historicos)?\\~\\
+\\~\\
+\\*
+\\*
+\begin{itemize}
+\item []
+
+ Datos a usar:
+\begin{itemize}
+\item Indice de desarrollo
+\item Fraccion etnica municipal segun censo y Covid 19 
+\item Twitter NLP 
+ 
+ 
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+%--------------------New Frame---------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{frame}{Propuesta 5}
+¿Existe un efecto entre la cercania de infraestructura vial y electrica con la calidad educativa?\\~\\
+\\~\\
+\\*
+\\*
+\begin{itemize}
+\item []
+
+ Datos a usar:
+\begin{itemize}
+\item Pruebas Saber 11
+\item Red Vial
+\item Luminiscencia nocturnas
+ 
+ 
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+%--------------------New Frame---------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{frame}{Propuesta 6}
+¿Los discursos en los debates presidenciales se forman de acuerdo a las tendencias en redes sociales?\\~\\
+\\~\\
+\\*
+\\*
+\begin{itemize}
+\item []
+
+ Datos a usar:
+\begin{itemize}
+\item Twitter NLP 
+\item Debate presidencias de diferentes medios de comunicación. 
+ 
+ 
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+\end{document}
